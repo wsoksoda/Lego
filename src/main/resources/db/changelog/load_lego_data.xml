@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="load_lego_data" author="wsoksoda">
+        <loadData tableName="lego" file="csv/lego_sets.csv" relativeToChangelogFile="true" quotchar='"'>
+            <column name="set_id" header="set_id" />
+            <column name="name" header="name" />
+            <column name="year" header="year" />
+            <column name="theme" header="theme" />
+            <column name="subtheme" header="subtheme" />
+            <column name="theme_group" header="themeGroup" />
+            <column name="category" header="category" />
+            <column name="pieces" header="pieces" />
+            <column name="minifigs" header="minifigs" />
+            <column name="age_range_min" header="agerange_min" />
+            <column name="us_retail_price" header="US_retailPrice" />
+            <column name="brickset_url" header="bricksetURL" />
+            <column name="thumbnail_url" header="thumbnailURL" />
+            <column name="image_url" header="imageURL" />
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
